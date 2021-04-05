@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.intro{
+			color:red;
+			font-size:27px;
+		}
+		.note{
+			background-color:yellow;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#one').click(function(){
+        $('p').hide(2000);
+		});
+	});
+	$(document).ready(function(){
+		$('#three').click(function(){
+			$('#red').fadeIn("fast");
+			$('#green').fadeIn("slow");
+			$('#blue').fadeIn(10000);
+
+		});
+	});
+	$(document).ready(function(){
+		$('#flip').click(function(){
+			$('#panel').slideToggle();
+		});
+	});
+    $(document).ready(function(){
+	 $("#four").click(function(){
+	   var div = $("#five");  
+	    div.animate({left: '100px'}, "slow");
+	    div.animate({fontSize: '3em'}, "slow");
+	  });
+	});
+	$(document).ready(function(){
+		$('#six').click(function(){
+			$("#change").removeClass("intro").addClass("note");
+		});
+	});
+	</script>
+	<title>show and hide items </title>
+</head>
+<body>
+	<div style="height:120px;">
+	<button id="one" > CLick me</button>
+	<p id="one"> this is a first line</p>
+	<p id="two"> this is a second line</p>
+
+	<br>
+	<br>
+	<br><br>
+	<br>
+</div>
+<div style="height:329px;">
+	<button id="three"> SHOW THE ALL DIV IN FADE</button>
+	<br>
+	<br>
+
+	<div id="red" style="width:80px; height:80px; display: none; background-color: red;"></div>
+	<br>
+	<div id="green" style="width:80px; height:80px; display: none; background-color: green;"></div>
+	<br>
+	<div id="blue" style="width:80px; height:80px; display: none;background-color: blue;"></div>
+	</div>
+	<div>
+	<div id="flip" style="text-align: center;background-color: #e5eecc; border: solid 1px #c3c3c3; padding:5px;">Click to slide down panel</div>
+    <div id="panel" style="text-align: center; background-color: #e5eecc;border: solid 1px #c3c3c3;  display:none; padding:50px;">hello vishal !</div>
+</div>
+<br>
+<br>
+
+<button id="four">start animation</button>
+<div style="height:200px;">
+<div id="five" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO
+</div>
+</div>
+<div>
+<h1> THE heading is:</h1>
+<p id="change"> THE FIRST PARAGRAPH</p>
+<p> THE SECOND PARAGRAPH</p>
+<button id="six">CHANGE CLASS</button>
+</div>
+</body>
+</html>
